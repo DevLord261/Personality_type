@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Flutter: Run",
+    "command": "flutter",
+    "args": ["run", "--pid-file", "pid"],
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+
+  {
+    "label": "Flutter: Hot Reload File Watcher",
+    "command": "inotifywait",
+    "allow_concurrent_runs": false,
+    "args": [
+      "-m ./lib -e create,delete,modify,move --include '.*\\.dart$' -r |",
+      "while read -r directory action file; do",
+      "echo \"hot reload $action $file\";",
+      "kill -s USR1 $(cat pid);",
+      "done"
+    ]
+  },
+  {
+    "label": "Flutter: Trigger Hot Reload",
+    "command": "kill",
+    "args": ["-s", "USR1", "$(cat pid)"]
+  },
+  {
+    "label": "Flutter: Trigger Hot Restart",
+    "command": "kill",
+    "args": ["-s", "USR2", "$(cat pid)"]
+  }
+]
