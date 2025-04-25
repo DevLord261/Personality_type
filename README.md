@@ -2,15 +2,28 @@
 
 A new Flutter project.
 
-## Getting Started
+## How to run the project
 
-This project is a starting point for a Flutter application.
+1. Clone the repository:
+   ```
+   git clone https://github.com/your_username/personality_project.git
+   ```
 
-A few resources to get you started if this is your first Flutter project:
+2. Navigate to the project directory:
+   ```
+   cd personality_project
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Install dependencies:
+   ```
+   flutter pub get
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. Run the app:
+   ```
+   flutter run
+   ```
+
+### Additional Information
+
+The project is kinda messy, I wasn't in my full focus when creating it. I hope its has some sense in it.
